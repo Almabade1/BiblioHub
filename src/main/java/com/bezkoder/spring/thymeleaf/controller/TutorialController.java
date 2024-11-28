@@ -21,11 +21,6 @@ public class TutorialController {
   @Autowired
   private TutorialRepository tutorialRepository;
 
-  // @GetMapping("/")
-  // public String home() {
-  //   return "redirect:/tutorials"; // Redirige a la lista de tutoriales
-  // }  
-
   @GetMapping("/tutorials")
   public String getAll(Model model, @Param("keyword") String keyword) {
     try {
@@ -52,7 +47,7 @@ public class TutorialController {
     tutorial.setPublished(true);
 
     model.addAttribute("tutorial", tutorial);
-    model.addAttribute("pageTitle", "Crear Lista");
+    model.addAttribute("pageTitle", "Create new Tutorial");
 
     return "tutorial_form";
   }
