@@ -21,10 +21,10 @@ public class TutorialController {
   @Autowired
   private TutorialRepository tutorialRepository;
 
-  @GetMapping("/")
-  public String home() {
-    return "redirect:/tutorials"; // Redirige a la lista de tutoriales
-  }  
+  // @GetMapping("/")
+  // public String home() {
+  //   return "redirect:/tutorials"; // Redirige a la lista de tutoriales
+  // }  
 
   @GetMapping("/tutorials")
   public String getAll(Model model, @Param("keyword") String keyword) {
