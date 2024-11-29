@@ -71,7 +71,7 @@ public class TutorialController {
       Tutorial tutorial = tutorialRepository.findById(id).get();
 
       model.addAttribute("tutorial", tutorial);
-      model.addAttribute("pageTitle", "Edit Tutorial (ID: " + id + ")");
+      model.addAttribute("pageTitle", "Editar Libro (ID: " + id + ")");
 
       return "tutorial_form";
     } catch (Exception e) {
