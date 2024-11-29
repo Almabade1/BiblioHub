@@ -62,7 +62,7 @@ public class TutorialController {
     try {
       tutorialRepository.save(tutorial);
 
-      redirectAttributes.addFlashAttribute("message", "The Tutorial has been saved successfully!");
+      redirectAttributes.addFlashAttribute("message", "El Libro se ha guardado exitosamente!");
     } catch (Exception e) {
       redirectAttributes.addAttribute("message", e.getMessage());
     }
@@ -91,7 +91,7 @@ public class TutorialController {
     try {
       tutorialRepository.deleteById(id);
 
-      redirectAttributes.addFlashAttribute("message", "The Tutorial with id=" + id + " has been deleted successfully!");
+      redirectAttributes.addFlashAttribute("message", "El libro con id=" + id + " ha sido eliminado exitosamente!");
     } catch (Exception e) {
       redirectAttributes.addFlashAttribute("message", e.getMessage());
     }
@@ -106,7 +106,7 @@ public class TutorialController {
       tutorialRepository.updatePublishedStatus(id, published);
 
       String status = published ? "published" : "disabled";
-      String message = "The Tutorial id=" + id + " has been " + status;
+      String message = "El libro id=" + id + " ha sido " + status;
 
       redirectAttributes.addFlashAttribute("message", message);
     } catch (Exception e) {
