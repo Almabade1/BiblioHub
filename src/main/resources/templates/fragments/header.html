@@ -1,9 +1,12 @@
 <header th:fragment="header">
   <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-    <a class="navbar-brand" th:href="@{/tutorials}">
-      BezKoder
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar">
+    <a class="navbar-brand" th:href="@{/tutorials}"> BiblioHub </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#topNavbar"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="topNavbar">
@@ -12,7 +15,7 @@
           <a class="nav-link" th:href="@{/tutorials}">Tutorials</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" th:href="@{/tutorials/new}">Add</a>
+          <a class="nav-link" th:href="@{/tutorials/new}">Añadir</a>
         </li>
       </ul>
     </div>
