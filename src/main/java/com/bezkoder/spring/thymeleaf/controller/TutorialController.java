@@ -52,7 +52,7 @@ public class TutorialController {
     tutorial.setPublished(true);
 
     model.addAttribute("tutorial", tutorial);
-    model.addAttribute("pageTitle", "Create new Tutorial");
+    model.addAttribute("pageTitle", "Crear Lista");
 
     return "tutorial_form";
   }
