@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIBLIOHUB - Inicio</title>
+    <style>
+        /* Estilos globales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #00aaff, #b0c4de, #00c3e3); /* Degradado azul y gris claro */
+            color: #fff;
+        }
+
+        /* Contenedor principal */
+        .container {
+            text-align: center;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            max-width: 600px;
+            width: 90%;
+        }
+
+        /* Estilo del encabezado */
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #00aaff; /* Azul brillante */
+        }
+
+        header .highlight {
+            color: #00c3e3; /* Celeste más claro */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            color: #fff;
+        }
+
+        /* Botón */
+        button {
+            background: linear-gradient(45deg, #00aaff, #b0c4de); /* Degradado de azul a gris claro */
+            color: #fff;
+            padding: 12px 25px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        button:hover {
+            background: linear-gradient(45deg, #0099cc, #a9b8c2); /* Hover con tono más oscuro de azul y gris */
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>¡Bienvenido a <span class="highlight">BIBLIOHUB</span>!</h1>
+            <p>Explora, descubre y conecta con el conocimiento.</p>
+        </header>
+        <main>
+            <button onclick="window.location.href='otra_vista.html'">Ir a la colección</button>
+        </main>
+    </div>
+</body>
+</html>

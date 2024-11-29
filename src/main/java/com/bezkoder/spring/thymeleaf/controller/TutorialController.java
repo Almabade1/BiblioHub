@@ -23,7 +23,7 @@ public class TutorialController {
 
   @GetMapping("/")
   public String home() {
-    return "redirect:/tutorials"; // Redirige a la lista de tutoriales
+    return "Home"; // Redirige a la lista de tutoriales
   }  
 
   @GetMapping("/tutorials")
