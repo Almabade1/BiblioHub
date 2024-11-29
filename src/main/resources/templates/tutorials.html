@@ -67,16 +67,16 @@
             <td>[[${tutorial.level}]]</td>
             <td>
               <a th:if="${tutorial.published == true}" class="fa-regular fa-square-check"
-                th:href="@{'/tutorials/' + ${tutorial.id} + '/published/false'}" title="Disable this tutorial"></a>
+                th:href="@{'/tutorials/' + ${tutorial.id} + '/published/false'}" title="Deshabilitar este libro"></a>
               <a th:if="${tutorial.published == false}" class="fa-regular fa-square icon-dark"
-                th:href="@{'/tutorials/' + ${tutorial.id} + '/published/true'}" title="Enable this tutorial"></a>
+                th:href="@{'/tutorials/' + ${tutorial.id} + '/published/true'}" title="Habilitar este libro"></a>
             </td>
             <td>
-              <a th:href="@{'/tutorials/' + ${tutorial.id}}" title="Edit this tutorial"
+              <a th:href="@{'/tutorials/' + ${tutorial.id}}" title="Editar este libro"
                 class="fa-regular fa-pen-to-square icon-dark"></a>
               &nbsp;
               <a th:href="@{'/tutorials/delete/' + ${tutorial.id}}" th:tutorialTitle="${tutorial.title}" id="btnDelete"
-                title="Delete this tutorial" class="fa-regular fa-trash-can icon-dark btn-delete"></a>
+                title="Eliminar este libro" class="fa-regular fa-trash-can icon-dark btn-delete"></a>
             </td>
           </tr>
         </tbody>
