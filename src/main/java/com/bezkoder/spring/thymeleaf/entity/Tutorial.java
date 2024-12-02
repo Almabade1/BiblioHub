@@ -75,8 +75,8 @@ public class Tutorial {
 
   @Override
   public String toString() {
-    return "Tutorial [id=" + id + ", title=" + title + ", description=" + description + ", level=" + level
-        + ", published=" + published + "]";
+    return "Libro [id=" + id + ", titulo=" + title + ", descripcion=" + description + ", nivel=" + level
+        + ", publicado=" + published + "]";
   }
 
 }

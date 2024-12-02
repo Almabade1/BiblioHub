@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
-  <title>Crear Lista</title>
+  <title>Libro</title>
 
   <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
   <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
@@ -15,45 +15,53 @@
 <body>
   <div th:replace="fragments/header :: header"></div>
 
-  <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
-    <div class="card shadow" style="width: 600px; padding: 20px; border-radius: 10px;">
-      <h2 class="text-center mb-4" style="color: #007bff;">[[${pageTitle}]]</h2>
-
-      <form th:action="@{/tutorials/save}" method="post" enctype="multipart/form-data" th:object="${tutorial}">
-        <input type="hidden" th:field="*{id}" />
-
-        <div class="form-group">
-          <label for="title" class="font-weight-bold">Título</label>
-          <input type="text" th:field="*{title}" required minlength="2" maxlength="128" class="form-control"
-            id="title" placeholder="Ingrese el título del tutorial" />
-        </div>
-
-        <div class="form-group mt-3">
-          <label for="description" class="font-weight-bold">Descripción</label>
-          <input type="text" th:field="*{description}" minlength="2" maxlength="256" class="form-control"
-            id="description" placeholder="Describa brevemente el tutorial" />
-        </div>
-
-        <div class="form-group mt-3">
-          <label for="level" class="font-weight-bold">Complejidad</label>
-          <input type="number" step="1" th:field="*{level}" required min="1" class="form-control"
-            id="level" placeholder="Nivel de dificultad (1 a 10)" />
-        </div>
-
-        <div class="form-group mt-3">
-          <label for="published" class="font-weight-bold">Publicado</label>
-          <div class="form-check">
-            <input type="checkbox" th:field="*{published}" id="published" class="form-check-input" />
-            <label class="form-check-label" for="published">Marque si desea publicar el tutorial</label>
-          </div>
-        </div>
-
-        <div class="text-center mt-4">
-          <button type="submit" class="btn btn-primary btn-lg mr-2">Guardar</button>
-          <button type="button" id="btnCancel" class="btn btn-secondary btn-lg">Cancelar</button>
-        </div>
-      </form>
+  <div class="container-fluid d-flex" style="min-height: 100vh; margin: 0; padding: 0;">
+    <!-- Sección del título a la izquierda -->
+    <div class="d-flex justify-content-center align-items-center" style="width: 40%; background-color: #007bff;">
+      <h2 class="text-center" style="color: white;">[[${pageTitle}]]</h2>
     </div>
+  
+    <!-- Sección del formulario a la derecha -->
+    <div class="d-flex justify-content-center align-items-center" style="width: 60%; padding: 20px;">
+      <div class="card shadow" style="width: 600px; padding: 20px; border-radius: 10px;">
+        <form th:action="@{/tutorials/save}" method="post" enctype="multipart/form-data" th:object="${tutorial}">
+          <input type="hidden" th:field="*{id}" />
+  
+          <div class="form-group">
+            <label for="title" class="font-weight-bold">Título</label>
+            <input type="text" th:field="*{title}" required minlength="2" maxlength="128" class="form-control"
+              id="title" placeholder="Ingrese el título del tutorial" />
+          </div>
+  
+          <div class="form-group mt-3">
+            <label for="description" class="font-weight-bold">Descripción</label>
+            <input type="text" th:field="*{description}" minlength="2" maxlength="256" class="form-control"
+              id="description" placeholder="Describa brevemente el tutorial" />
+          </div>
+  
+          <div class="form-group mt-3">
+            <label for="level" class="font-weight-bold">Complejidad</label>
+            <input type="number" step="1" th:field="*{level}" required min="1" class="form-control"
+              id="level" placeholder="Nivel de dificultad (1 a 10)" />
+          </div>
+  
+          <div class="form-group mt-3">
+            <label for="published" class="font-weight-bold">Stock</label>
+            <div class="form-check">
+              <input type="checkbox" th:field="*{published}" id="published" class="form-check-input" />
+              <label class="form-check-label" for="published">Marque si hay stock</label>
+            </div>
+          </div>
+  
+          <div class="text-center mt-4">
+            <button type="submit" class="btn btn-primary btn-lg mr-2" style="width: 30%;">Guardar</button>
+            <button type="button" id="btnCancel" class="btn btn-secondary btn-lg" style="width: 30%;">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
   </div>
 
   <div th:replace="fragments/footer :: footer"></div>
@@ -65,6 +73,7 @@
       });
     });
   </script>
+
 </body>
 
 </html>
