@@ -105,8 +105,8 @@ public class TutorialController {
     try {
       tutorialRepository.updatePublishedStatus(id, published);
 
-      String status = published ? "published" : "disabled";
-      String message = "El libro id=" + id + " ha sido " + status;
+      String status = published ? "añadió" : " quito";
+      String message =  "Se " + status +" stock del libro id=" + id ;
 
       redirectAttributes.addFlashAttribute("message", message);
     } catch (Exception e) {
