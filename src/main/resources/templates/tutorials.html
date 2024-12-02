@@ -54,7 +54,7 @@
       </div>
 
       <div class="my-3">
-        <form th:action="@{/tutorials}">
+        <form th:action="@{/Libros}">
           <div class="row d-flex">
             <div class="col-md-6 mt-2">
               <div class="search">
@@ -81,7 +81,7 @@
                 $(document).ready(function () {
                   // Lógica del botón "+"
                   $("#btnAdd").on("click", function () {
-                    window.location = "[[@{/tutorials/new}]]"; // Redirige a /tutorials/new
+                    window.location = "[[@{/Libros/new}]]"; // Redirige a /tutorials/new
                   });
                 });
               </script>
@@ -112,25 +112,25 @@
                 <a
                   th:if="${tutorial.published == true}"
                   class="fa-regular fa-square-check"
-                  th:href="@{'/tutorials/' + ${tutorial.id} + '/published/false'}"
+                  th:href="@{'/Libros/' + ${tutorial.id} + '/published/false'}"
                   title="Deshabilitar este libro"
                 ></a>
                 <a
                   th:if="${tutorial.published == false}"
                   class="fa-regular fa-square icon-dark"
-                  th:href="@{'/tutorials/' + ${tutorial.id} + '/published/true'}"
+                  th:href="@{'/Libros/' + ${tutorial.id} + '/published/true'}"
                   title="Habilitar este libro"
                 ></a>
               </td>
               <td>
                 <a
-                  th:href="@{'/tutorials/' + ${tutorial.id}}"
+                  th:href="@{'/Libros/' + ${tutorial.id}}"
                   title="Editar este libro"
                   class="fa-regular fa-pen-to-square icon-dark"
                 ></a>
                 &nbsp;
                 <a
-                  th:href="@{'/tutorials/delete/' + ${tutorial.id}}"
+                  th:href="@{'/Libros/delete/' + ${tutorial.id}}"
                   th:tutorialTitle="${tutorial.title}"
                   id="btnDelete"
                   title="Eliminar este libro"
@@ -196,7 +196,7 @@
         $("#btnClear").on("click", function (e) {
           e.preventDefault();
           $("#keyword").text("");
-          window.location = "[[@{/tutorials}]]";
+          window.location = "[[@{/Libros}]]";
         });
       });
     </script>

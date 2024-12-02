@@ -26,7 +26,7 @@ public class TutorialController {
     return "Home"; // Redirige a la lista de tutoriales
   }  
 
-  @GetMapping("/tutorials")
+  @GetMapping("/Libros")
   public String getAll(Model model, @Param("keyword") String keyword) {
     try {
       List<Tutorial> tutorials = new ArrayList<Tutorial>();
@@ -46,7 +46,7 @@ public class TutorialController {
     return "tutorials";
   }
 
-  @GetMapping("/tutorials/new")
+  @GetMapping("/Libros/new")
   public String addTutorial(Model model) {
     Tutorial tutorial = new Tutorial();
     tutorial.setPublished(true);
@@ -57,7 +57,7 @@ public class TutorialController {
     return "tutorial_form";
   }
 
-  @PostMapping("/tutorials/save")
+  @PostMapping("/Libros/save")
   public String saveTutorial(Tutorial tutorial, RedirectAttributes redirectAttributes) {
     try {
       tutorialRepository.save(tutorial);
@@ -67,10 +67,10 @@ public class TutorialController {
       redirectAttributes.addAttribute("message", e.getMessage());
     }
 
-    return "redirect:/tutorials";
+    return "redirect:/Libros";
   }
 
-  @GetMapping("/tutorials/{id}")
+  @GetMapping("Libros/{id}")
   public String editTutorial(@PathVariable("id") Integer id, Model model, RedirectAttributes redirectAttributes) {
     try {
       Tutorial tutorial = tutorialRepository.findById(id).get();
@@ -82,11 +82,11 @@ public class TutorialController {
     } catch (Exception e) {
       redirectAttributes.addFlashAttribute("message", e.getMessage());
 
-      return "redirect:/tutorials";
+      return "redirect:/Libros";
     }
   }
 
-  @GetMapping("/tutorials/delete/{id}")
+  @GetMapping("/Libros/delete/{id}")
   public String deleteTutorial(@PathVariable("id") Integer id, Model model, RedirectAttributes redirectAttributes) {
     try {
       tutorialRepository.deleteById(id);
@@ -96,10 +96,10 @@ public class TutorialController {
       redirectAttributes.addFlashAttribute("message", e.getMessage());
     }
 
-    return "redirect:/tutorials";
+    return "redirect:/Libros";
   }
 
-  @GetMapping("/tutorials/{id}/published/{status}")
+  @GetMapping("/Libros/{id}/published/{status}")
   public String updateTutorialPublishedStatus(@PathVariable("id") Integer id, @PathVariable("status") boolean published,
       Model model, RedirectAttributes redirectAttributes) {
     try {
@@ -113,6 +113,6 @@ public class TutorialController {
       redirectAttributes.addFlashAttribute("message", e.getMessage());
     }
 
-    return "redirect:/tutorials";
+    return "redirect:/Libros";
   }
 }
