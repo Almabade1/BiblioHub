@@ -75,14 +75,27 @@ Crear una plataforma intuitiva y robusta para la administración eficiente de li
      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/localhost_8081_Libros_keyword=el.png" alt="search list" width="600">
   </div>
   
-  
 - **Acciones sobre libros:**
   - **Editar**: Modifica los datos de un libro existente.
+    
+      <div align="center">
+         <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/localhost_8081_Libros_70.png" alt="edit book" width="600">
+      </div>
+
   - **Eliminar**: Despliega un modal de confirmación antes de borrar un libro.
+      <div align="center">
+         <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/localhost_8081_Libros_modal.png" alt="delete book modal" width="600">
+      </div>
+
   - **Habilitar/Deshabilitar**: Cambia el estado de publicación del libro.
+      <div align="center">
+         <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/localhost_8081_Libros_stock.png" alt="edit alert" width="600">
+      </div>
 
 - **Acciones sobre libros:** Al realizar una acción (como agregar, actualizar o eliminar), se muestran mensajes de confirmación en una alerta destacada.
-
+      <div align="center">
+         <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/localhost_8081_Libros_aviso.png" alt="edit alert" width="600">
+      </div>
 
 
 ### Ramas
