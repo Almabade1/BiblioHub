@@ -154,10 +154,43 @@ Detalla cómo Jenkins ejecuta estas pruebas automáticamente.
    </div>
 
 ### D. Pruebas Funcionales
-- Breve introducción sobre las pruebas funcionales.
+- Las pruebas funcionales verifican la interacción del usuario con la aplicación web y garantizan que las funcionalidades clave se comporten como se espera. Para este propósito, se utilizó Selenium WebDriver.
 
 #### Pruebas
-1. **testSomething:** Describe su objetivo y pasos clave.
+1. **testHomePageLoads:**
+   
+   - **Objetivo:** Verificar que la página principal se carga correctamente y contiene el encabezado esperado.
+   - **Pasos Clave:**
+     1. Navegar a la URL principal (```http://localhost:8081/```).
+     2. Localizar el elemento ```h1``` y comprobar que contiene el texto "BIBLIOHUB".
+   - **Resultado esperado:** El encabezado de la página debe mostrar "BIBLIOHUB".
+      <div align="center">
+         <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/testHomePageLoads.png" alt="testHomePageLoads" width="600">
+      </div>
+      
+2. **testAddBook:**
+   
+   - **Objetivo:** Validar que un nuevo libro se puede agregar correctamente al sistema.
+   - **Pasos Clave:**
+     1. Navegar al formulario de nuevo libro (```http://localhost:8081/Libros/new```).
+     2. Rellenar los campos: título, descripción, nivel y estado de publicación.
+     3. Enviar el formulario y verificar el mensaje de éxito.
+   - **Resultado esperado:** El mensaje de éxito debe contener la palabra "guardado".
+      <div align="center">
+         <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/testAddBook.png" alt="testAddBook" width="600">
+      </div>
+
+3. **testViewBookList:**
+   
+   - **Objetivo:** Asegurarse de que la lista de libros se muestra correctamente.
+   - **Pasos Clave:**
+     1. Navegar a la lista de libros (```http://localhost:8081/Libros```).
+     2. Esperar a que la tabla de libros sea visible.
+     3. Verificar que la tabla contiene filas.
+   - **Resultado esperado:** La tabla debe estar visible y contener datos.
+      <div align="center">
+         <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/testViewBookList.png" alt="testViewBookList" width="600">
+      </div>
 
 #### Evidencia de Pruebas Funcionales
 Explica los resultados generales de las pruebas funcionales.
