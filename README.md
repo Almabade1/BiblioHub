@@ -47,7 +47,7 @@
 La aplicación web desarrollada permite gestionar un sistema de administración de libros, utilizando Spring Boot y Thymeleaf para la interfaz.
 
 <div align="center">
-  <img src="https://github.com/Almabade1/BiblioHub/Imagenes/localhost_8081_.png" alt="home image" width="600">
+  <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/localhost_8081_.png" alt="home image" width="600">
 </div>
 
 ### Objetivo
@@ -68,11 +68,11 @@ Crear una plataforma intuitiva y robusta para la administración eficiente de li
   La tabla se actualiza según los resultados de búsqueda.
 
   <div align="center">
-     <img src="https://github.com/Almabade1/BiblioHub/Imagenes/localhost_8081_Libros.png" alt="book table" width="600">
+     <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/localhost_8081_Libros.png" alt="book table" width="600">
   </div>
 
   <div align="center">
-     <img src="https://github.com/Almabade1/BiblioHub/Imagenes/localhost_8081_Libros_keyword=el.png.png" alt="search list" width="600">
+     <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/localhost_8081_Libros_keyword=el.png" alt="search list" width="600">
   </div>
   
   
