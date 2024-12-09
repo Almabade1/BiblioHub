@@ -142,10 +142,96 @@ Describe cómo Jenkins automatiza este análisis.
 - Breve introducción sobre las pruebas unitarias.
 
 #### Pruebas
-1. **testSomething:** Describe su objetivo y pasos clave.
+1. **testGetAll_NoKeyword:**
+   
+   - **Objetivo:** Verificar que el controlador ```getAll``` recupera todos los libros correctamente sin ningún filtro de búsquedaVerificar que el controlador getAll recupera todos los libros correctamente sin ningún filtro de búsqueda.
+   - **Pasos Clave:**
+     1. Se configura el repositorio para devolver una lista de objetos ```Tutorial```.
+     2. Se verifica que el repositorio ```findAll()``` es llamado.
+     3. Se confirma que el modelo contiene los atributos adecuados y la vista "tutorials" se retorna correctamente.
+   - **Resultado esperado:** El método debe devolver la vista ```tutorials``` con todos los libros existentes.
+     
+      <div align="center">
+         <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/testGetAll_NoKeyword.png" alt="testGetAll_NoKeyword" width="600">
+      </div>
+      
+2. **testGetAll_WithKeyword:**
+   
+   - **Objetivo:** Validar que el método ```getAll``` recupera libros filtrados por una palabra clave específica.
+   - **Pasos Clave:**
+     1. Proporcionar un ```keyword``` (ej. ```"Test"```).
+     2. Configurar el repositorio para que busque libros por título con la palabra clave.
+     3. Verificar que el repositorio y el modelo contienen los datos correspondientes.
+   - **Resultado esperado:** La vista debe contener los libros que coincidan con la palabra clave proporcionada.
+     
+      <div align="center">
+         <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/testGetAll_WithKeyword.png" alt="testGetAll_WithKeyword" width="600">
+      </div>
 
+3. **testAddTutorial:**
+   
+   - **Objetivo:** Asegurarse de que el método addTutorial retorna el formulario correcto y añade atributos necesarios al modelo.
+   - **Pasos Clave:**
+     1. Invocar el método ```addTutorial```.
+     2. Confirmar que el controlador agrega el objeto Tutorial y el título de la página al modelo.
+   - **Resultado esperado:** Se debe retornar la vista ```tutorial_form``` con los atributos apropiados.
+     
+      <div align="center">
+         <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/testAddTutorial.png" alt="testAddTutorial" width="600">
+      </div>
+      
+4. **testSaveTutorial:**
+   
+   - **Objetivo:** Probar que el método ```saveTutorial``` guarda un nuevo libro y redirecciona a la vista adecuada.
+   - **Pasos Clave:**
+     1. Configurar un objeto ```Tutorial```.
+     2. Ejecutar el método y verificar que el repositorio y ```RedirectAttributes``` procesen el mensaje de confirmación.
+   - **Resultado esperado:** El repositorio debe guardar el tutorial y el mensaje debe aparecer en la vista principal.
+     
+      <div align="center">
+         <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/testSaveTutorial.png" alt="testSaveTutorial" width="600">
+      </div>
+            
+5. **testEditTutorial:**
+   
+   - **Objetivo:** Validar que el método ```editTutorial``` permite editar un libro específico.
+   - **Pasos Clave:**
+     1. Proveer el ID del tutorial y configurar el repositorio para encontrar el objeto correspondiente.
+     2. Verificar que el modelo contiene el tutorial y atributos relevantes.
+   - **Resultado esperado:** El método debe retornar la vista ```tutorial_form``` con la información actualizada del libro.
+     
+      <div align="center">
+         <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/testEditTutorial.png" alt="testEditTutorial" width="600">
+      </div>
+      
+6. **testDeleteTutorial:**
+   
+   - **Objetivo:** Asegurarse de que el método ```deleteTutorial``` elimina correctamente un libro.
+   - **Pasos Clave:**
+     1. Invocar el método ```deleteTutorial``` con el ID del libro.
+     2. Verificar que el repositorio ```deleteById``` y el ```RedirectAttributes``` procesan el mensaje de eliminación.
+   - **Resultado esperado:** El repositorio debe guardar el tutorial y el mensaje debe aparecer en la vista principal.
+     
+      <div align="center">
+         <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/testDeleteTutorial.png" alt="testDeleteTutorial" width="600">
+      </div>
+
+7. **testUpdatePublishedStatus:**
+   
+   - **Objetivo:** Probar el método ```updateTutorialPublishedStatus``` para cambiar el estado de un libro entre publicado y no publicado.
+   - **Pasos Clave:**
+     1. Proveer el ID del tutorial y el valor booleano ```published```.
+     2. Configurar el repositorio para realizar la actualización del estado.
+   - **Resultado esperado:** El método debe redireccionar a la vista principal y mostrar el mensaje de confirmación.
+     
+      <div align="center">
+         <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/testUpdatePublishedStatus" alt="testUpdatePublishedStatus" width="600">
+      </div>
+      
 #### Evidencia de Pruebas Unitarias
-Explica los resultados generales de las pruebas.
+   <div align="center">
+      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/mvn test unit" alt="mvn test unit" width="600">
+   </div>
 
 #### Integración con Jenkins
 Detalla cómo Jenkins ejecuta estas pruebas automáticamente.
