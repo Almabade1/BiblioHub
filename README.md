@@ -45,11 +45,28 @@
 ## 1. Propósito del Proyecto
 
 ### Descripción
-Describe brevemente el propósito del proyecto y sus características principales.
+La aplicación web desarrollada permite gestionar un sistema de administración de libros, utilizando Spring Boot y Thymeleaf para la interfaz.
 
 ### Funcionalidades principales
-- **Funcionalidad 1:** Explica brevemente esta funcionalidad.
+- **Añadir Libros:** Botón para gregar un nuevo libro al sistema, redirigiendo al formulario correspondiente.
+- **Buscar Libros:**
+  - Utiliza un campo de búsqueda para localizar libros por su título.
+  - Botón para limpiar el campo de búsqueda y reiniciar la vista.
+- **Listar Libros:** Una tabla muestra información clave de cada libro:
+  - **ID**: Identificador único.
+  - **Título**: Nombre del libro.
+  - **Descripción**: Resumen del contenido.
+  - **Complejidad**: Nivel de dificultad asociado al libro.
+  - **Stock**: Estado de publicación o disponibilidad.
 
+  La tabla se actualiza según los resultados de búsqueda.
+  
+- **Acciones sobre libros:**
+  - **Editar**: Modifica los datos de un libro existente.
+  - **Eliminar**: Despliega un modal de confirmación antes de borrar un libro.
+  - **Habilitar/Deshabilitar**: Cambia el estado de publicación del libro.
+
+- **Acciones sobre libros:** Al realizar una acción (como agregar, actualizar o eliminar), se muestran mensajes de confirmación en una alerta destacada.
 ### Objetivo
 Describe el objetivo general del proyecto.
 
