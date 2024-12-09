@@ -8,7 +8,6 @@
 - Quiroz Ardiles, Sergio Daniel
 - Monzon Infante, Cesar
 - Cruz Bravo, Maycol Augusto
-- 
 
 ## Índice
 1. [Propósito del Proyecto](#1-propósito-del-proyecto)  
@@ -47,8 +46,15 @@
 ### Descripción
 La aplicación web desarrollada permite gestionar un sistema de administración de libros, utilizando Spring Boot y Thymeleaf para la interfaz.
 
+<div align="center">
+  <img src="https://github.com/Almabade1/BiblioHub/Imagenes/localhost_8081_.png" alt="home image" width="600">
+</div>
+
+### Objetivo
+Crear una plataforma intuitiva y robusta para la administración eficiente de libros, con soporte para pruebas automatizadas y buen desempeño bajo carga.
+
 ### Funcionalidades principales
-- **Añadir Libros:** Botón para gregar un nuevo libro al sistema, redirigiendo al formulario correspondiente.
+- **Añadir Libros:** Botón para agregar un nuevo libro al sistema, redirigiendo al formulario correspondiente.
 - **Buscar Libros:**
   - Utiliza un campo de búsqueda para localizar libros por su título.
   - Botón para limpiar el campo de búsqueda y reiniciar la vista.
@@ -60,6 +66,15 @@ La aplicación web desarrollada permite gestionar un sistema de administración 
   - **Stock**: Estado de publicación o disponibilidad.
 
   La tabla se actualiza según los resultados de búsqueda.
+
+  <div align="center">
+     <img src="https://github.com/Almabade1/BiblioHub/Imagenes/localhost_8081_Libros.png" alt="book table" width="600">
+  </div>
+
+  <div align="center">
+     <img src="https://github.com/Almabade1/BiblioHub/Imagenes/localhost_8081_Libros_keyword=el.png.png" alt="search list" width="600">
+  </div>
+  
   
 - **Acciones sobre libros:**
   - **Editar**: Modifica los datos de un libro existente.
@@ -67,8 +82,8 @@ La aplicación web desarrollada permite gestionar un sistema de administración 
   - **Habilitar/Deshabilitar**: Cambia el estado de publicación del libro.
 
 - **Acciones sobre libros:** Al realizar una acción (como agregar, actualizar o eliminar), se muestran mensajes de confirmación en una alerta destacada.
-### Objetivo
-Describe el objetivo general del proyecto.
+
+
 
 ### Ramas
 - **master:** Breve descripción de la rama.
