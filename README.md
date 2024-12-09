@@ -155,7 +155,18 @@ Detalla cómo Jenkins ejecuta estas pruebas automáticamente.
 
 ### D. Pruebas Funcionales
 - Las pruebas funcionales verifican la interacción del usuario con la aplicación web y garantizan que las funcionalidades clave se comporten como se espera. Para este propósito, se utilizó Selenium WebDriver.
+  
+   <div align="center">
+      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/selenium pom.png" alt="selenium pom" width="600">
+   </div>
+   
+- Se utilizo el web driver de Chrome:
+  
+   <div align="center">
+      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/web driver chrome.png" alt="web driver chrome" width="600">
+   </div>
 
+   
 #### Pruebas
 1. **testHomePageLoads:**
    
@@ -164,6 +175,7 @@ Detalla cómo Jenkins ejecuta estas pruebas automáticamente.
      1. Navegar a la URL principal (```http://localhost:8081/```).
      2. Localizar el elemento ```h1``` y comprobar que contiene el texto "BIBLIOHUB".
    - **Resultado esperado:** El encabezado de la página debe mostrar "BIBLIOHUB".
+     
       <div align="center">
          <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/testHomePageLoads.png" alt="testHomePageLoads" width="600">
       </div>
@@ -176,6 +188,7 @@ Detalla cómo Jenkins ejecuta estas pruebas automáticamente.
      2. Rellenar los campos: título, descripción, nivel y estado de publicación.
      3. Enviar el formulario y verificar el mensaje de éxito.
    - **Resultado esperado:** El mensaje de éxito debe contener la palabra "guardado".
+     
       <div align="center">
          <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/testAddBook.png" alt="testAddBook" width="600">
       </div>
@@ -188,15 +201,18 @@ Detalla cómo Jenkins ejecuta estas pruebas automáticamente.
      2. Esperar a que la tabla de libros sea visible.
      3. Verificar que la tabla contiene filas.
    - **Resultado esperado:** La tabla debe estar visible y contener datos.
+     
       <div align="center">
          <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/testViewBookList.png" alt="testViewBookList" width="600">
       </div>
 
 #### Evidencia de Pruebas Funcionales
-Explica los resultados generales de las pruebas funcionales.
+   <div align="center">
+      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/mvn test.png" alt="mvn test" width="600">
+   </div>
 
 #### Integración con Jenkins
-Detalla cómo Jenkins ejecuta estas pruebas automáticamente.
+
    <div align="center">
       <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/jenkins funcional tests.png" alt="jenkins functional" width="600">
    </div>
