@@ -225,7 +225,7 @@ Describe cómo Jenkins automatiza este análisis.
    - **Resultado esperado:** El método debe redireccionar a la vista principal y mostrar el mensaje de confirmación.
      
       <div align="center">
-         <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/testUpdatePublishedStatus" alt="testUpdatePublishedStatus" width="600">
+         <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/testUpdatePublishedStatus.png" alt="testUpdatePublishedStatus" width="600">
       </div>
       
 #### Evidencia de Pruebas Unitarias
