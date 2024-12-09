@@ -110,21 +110,33 @@ Crear una plataforma intuitiva y robusta para la administración eficiente de li
 ## 2. Pipeline: Herramientas/Frameworks + Evidencia + Integración con Jenkins
 
 ### A. Construcción Automática
-- Describe cómo se realiza la construcción automática.
+- La integración y despliegue continuo para BiblioHub se implementa utilizando Jenkins como herramienta de automatización y Maven como gestor de construcción del proyecto.
+     <div align="center">
+         <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/pom.png" alt="maven" width="600">
+      </div>
 
 #### Integración con Jenkins
-Explica cómo Jenkins está integrado en esta etapa.
+   <div align="center">
+      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/jenkins.png" alt="maven" width="600">
+   </div>
 
 ### B. Análisis Estático
-- Breve descripción del análisis estático y sus objetivos.
+- El análisis estático se llevó a cabo utilizando SonarQube para identificar posibles problemas en el código y mejorar la calidad general del proyecto.
 
 #### Informe de SonarQube
+   <div align="center">
+      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/sonarqube informe.png" alt="informe de sonarqube" width="600">
+   </div>
+   
 - **Complejidad Ciclomática y Cognitiva:** Detalla su importancia.
 - **Bugs:** Resume los problemas identificados.
 - **Code Smells:** Explica los principales problemas encontrados.
 
 #### Integración con Jenkins
 Describe cómo Jenkins automatiza este análisis.
+   <div align="center">
+      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/jenkins sonarqube.png" alt="jenkins sonarqube" width="600">
+   </div>
 
 ### C. Pruebas Unitarias
 - Breve introducción sobre las pruebas unitarias.
@@ -137,6 +149,9 @@ Explica los resultados generales de las pruebas.
 
 #### Integración con Jenkins
 Detalla cómo Jenkins ejecuta estas pruebas automáticamente.
+   <div align="center">
+      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/jenkins unit tests.png" alt="jenkins unit" width="600">
+   </div>
 
 ### D. Pruebas Funcionales
 - Breve introducción sobre las pruebas funcionales.
@@ -149,6 +164,9 @@ Explica los resultados generales de las pruebas funcionales.
 
 #### Integración con Jenkins
 Detalla cómo Jenkins ejecuta estas pruebas automáticamente.
+   <div align="center">
+      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/jenkins funcional tests.png" alt="jenkins functional" width="600">
+   </div>
 
 ### E. Pruebas de Performance
 - Introducción a las pruebas de rendimiento.
@@ -161,6 +179,9 @@ Explica los resultados obtenidos durante las pruebas.
 
 #### Integración de las pruebas de performance con Jenkins
 Detalla cómo Jenkins ejecuta y reporta estas pruebas.
+   <div align="center">
+      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/jenkins jmeter.png" alt="jenkins jmeter" width="600">
+   </div>
 
 ### F. Pruebas de Seguridad
 - Breve descripción de las pruebas de seguridad realizadas.
