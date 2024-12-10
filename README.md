@@ -99,11 +99,29 @@ Crear una plataforma intuitiva y robusta para la administración eficiente de li
 
 
 ### Ramas
-- **master:** Breve descripción de la rama.
+Cada miembro del equipo creó su propia rama para trabajar de manera independiente. Este enfoque permite mantener un control claro sobre las contribuciones individuales y asegura que las modificaciones de cada participante se integren de manera ordenada. A continuación, se describe la estructura de ramas utilizada:
 
-### Guardado de Datos
-- Breve explicación del mecanismo de almacenamiento.
-- Menciona tecnologías relevantes (e.g., Spring Data JPA, H2, etc.).
+1. **master:**
+   - Esta es la rama principal y estable del proyecto.
+   - Contiene el código listo para producción y despliegue.
+   - Solo se fusionan cambios que han sido revisados y probados.
+
+2. **Ramas individuales:**
+   Cada participante del equipo creó una rama personal identificada por su nombre. Estas ramas se utilizaron para **desarrollar** y **probar** las contribuciones individuales antes de integrarlas a la rama principal.
+   - Maycol
+   - cesar
+   - leonardo
+   - luis
+   - mariana
+   - sergio
+
+### Guardado de Datos  
+El sistema utiliza **H2 Database** como base de datos integrada para almacenar los datos. Durante la ejecución:  
+
+- Los datos se gestionan mediante **Spring Data JPA**, facilitando el manejo de repositorios y operaciones transaccionales.  
+- La configuración de persistencia está en el archivo `application.properties`, ubicado en el directorio `src/main/resources`.  
+- Los datos se almacenan en un archivo local (`testdb.mv.db`), con soporte para actualizaciones automáticas del esquema.  
+
 
 ---
 
@@ -121,25 +139,50 @@ Crear una plataforma intuitiva y robusta para la administración eficiente de li
    </div>
 
 ### B. Análisis Estático
-- El análisis estático se llevó a cabo utilizando SonarQube para identificar posibles problemas en el código y mejorar la calidad general del proyecto.
+- El análisis estático fue realizado para garantizar la calidad, seguridad y mantenibilidad del código del proyecto. Esto se implementó utilizando herramientas especializadas que nos ayudaron a identificar defectos en las etapas iniciales del desarrollo.
+- Herramientas Utilizadas:
+  - SonarQube: Para generar informes detallados sobre métricas de calidad y posibles errores en el código.
+  - Jenkins: Integrado con SonarQube para automatizar el análisis estático dentro del pipeline de CI/CD.
 
 #### Informe de SonarQube
    <div align="center">
       <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/sonarqube informe.png" alt="informe de sonarqube" width="600">
    </div>
    
-- **Complejidad Ciclomática y Cognitiva:** Detalla su importancia.
-- **Bugs:** Resume los problemas identificados.
-- **Code Smells:** Explica los principales problemas encontrados.
+- **Complejidad Ciclomática y Cognitiva:**
+  Este análisis ayuda a evaluar la mantenibilidad del código y reducir la deuda técnica.
 
+  <div align="center">
+      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/complejidad.png" alt="complejidad" width="600">
+   </div>
+  
+- **Bugs:**
+  Se identificaron varios bugs, entre ellos:
+
+  <div align="center">
+      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/bugs.png" alt="bugs" width="600">
+   </div>
+  
+- **Code Smells:**
+  Se detectaron varios code smells relacionados con duplicación de código. Esto puede dificultar el mantenimiento del sistema.
+
+  <div align="center">
+      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/code smells.png" alt="code smells" width="600">
+   </div>
+  
 #### Integración con Jenkins
-Describe cómo Jenkins automatiza este análisis.
+
    <div align="center">
       <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/jenkins sonarqube.png" alt="jenkins sonarqube" width="600">
    </div>
 
 ### C. Pruebas Unitarias
-- Breve introducción sobre las pruebas unitarias.
+- Las pruebas unitarias garantizan que cada componente individual del sistema funcione correctamente de manera aislada. En BiblioHub, estas pruebas se implementaron con JUnit.
+  
+   <div align="center">
+      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/junit.png" alt="junit" width="600">
+   </div>
+   
 
 #### Pruebas
 1. **testGetAll_NoKeyword:**
@@ -218,9 +261,9 @@ Describe cómo Jenkins automatiza este análisis.
 
 7. **testUpdatePublishedStatus:**
    
-   - **Objetivo:** Probar el método ```updateTutorialPublishedStatus``` para cambiar el estado de un libro entre publicado y no publicado.
+   - **Objetivo:** Probar el método `updateTutorialPublishedStatus` para cambiar el estado de un libro entre publicado y no publicado.
    - **Pasos Clave:**
-     1. Proveer el ID del tutorial y el valor booleano ```published```.
+     1. Proveer el ID del tutorial y el valor booleano `published`.
      2. Configurar el repositorio para realizar la actualización del estado.
    - **Resultado esperado:** El método debe redireccionar a la vista principal y mostrar el mensaje de confirmación.
      
@@ -229,12 +272,13 @@ Describe cómo Jenkins automatiza este análisis.
       </div>
       
 #### Evidencia de Pruebas Unitarias
+
    <div align="center">
       <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/mvn test unit.png" alt="mvn test unit" width="600">
    </div>
 
 #### Integración con Jenkins
-Detalla cómo Jenkins ejecuta estas pruebas automáticamente.
+
    <div align="center">
       <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/jenkins unit tests.png" alt="jenkins unit" width="600">
    </div>
@@ -293,6 +337,7 @@ Detalla cómo Jenkins ejecuta estas pruebas automáticamente.
       </div>
 
 #### Evidencia de Pruebas Funcionales
+
    <div align="center">
       <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/mvn test.png" alt="mvn test" width="600">
    </div>
@@ -304,16 +349,47 @@ Detalla cómo Jenkins ejecuta estas pruebas automáticamente.
    </div>
 
 ### E. Pruebas de Performance
-- Introducción a las pruebas de rendimiento.
+- En este apartado se llevaron a cabo pruebas de rendimiento utilizando Apache JMeter para evaluar el desempeño del sistema. Estas pruebas permitieron identificar cuellos de botella y analizar la capacidad de respuesta de la aplicación bajo distintas condiciones de carga. Los parámetros configurados incluyeron lo siguiente:
+  
+  - **Número de threads:** a
+  - **Ramp-up period:** n segundos
+  - **Loop count:** x
 
 #### Casos evaluados
-1. **Caso 1:** Breve descripción del caso.
+1. **Caso 1:**
+   
+   Utiliza un HTTP Request con un método POST para - el mensaje -.
+   
+   <div align="center">
+      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/caso 1.png" alt="caso 1" width="600">
+   </div>
+   
+2. **Caso 2:**
+   
+   Utiliza un HTTP Request con un método POST para - el mensaje -.
+   
+   <div align="center">
+      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/caso 2.png" alt="caso 2" width="600">
+   </div>
+
+3. **Caso 3:**
+   
+   Utiliza un HTTP Request con un método POST para - el mensaje -.
+   
+   <div align="center">
+      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/caso 3.png" alt="caso 3" width="600">
+   </div>
 
 #### Resultados de la ejecución de las pruebas de performance
-Explica los resultados obtenidos durante las pruebas.
+
+   <div align="center">
+      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/jmeter report.png" alt="jmeter report" width="600">
+   </div>
 
 #### Integración de las pruebas de performance con Jenkins
-Detalla cómo Jenkins ejecuta y reporta estas pruebas.
+El bloque `stage("Pruebas de Rendimiento - JMeter")` en el pipeline de Jenkins ejecuta pruebas de rendimiento automatizadas utilizando Apache JMeter en modo no gráfico (`-n`). Se especifica el archivo de prueba `bibliohubTest.jmx` y se configuran parámetros como `-l` para guardar los resultados en `resultados.jtl`, `-e` para generar reportes HTML automáticamente y `-o` para almacenar dichos reportes en `C:/Program Files/Jenkins/reporte_rendimiento`. Al finalizar, el bloque `post` limpia el espacio de trabajo con `cleanWs()` para asegurar un entorno limpio y optimizado para futuras ejecuciones.
+
+
    <div align="center">
       <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/jenkins jmeter.png" alt="jenkins jmeter" width="600">
    </div>
@@ -325,8 +401,14 @@ Detalla cómo Jenkins ejecuta y reporta estas pruebas.
 Explica cómo Jenkins automatiza estas pruebas.
 
 ### G. Gestión de Issues
-- Describe cómo se registran y gestionan los issues en GitHub Projects.
-- Incluye detalles como responsables, etiquetas, y duración estimada.
+En GitHub Projects, se registran los problemas más relevantes identificados durante las pruebas en SonarQube. También se distribuye el trabajo entre los miembros del equipo mediante tareas, las cuales incluyen:
+
+- **Nombre de la tarea:** Descripción específica de lo que se debe realizar.  
+- **Responsable:** Miembro del equipo encargado de llevar a cabo la tarea.  
+- **Etiqueta:** Clasificación de la tarea según su prioridad o tipo (por ejemplo, bug, mejora).  
+- **Duración estimada:** Tiempo aproximado para completar la tarea.
+
+
 
 ---
 
