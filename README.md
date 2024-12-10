@@ -144,7 +144,7 @@ Describe cómo Jenkins automatiza este análisis.
 #### Pruebas
 1. **testGetAll_NoKeyword:**
    
-   - **Objetivo:** Verificar que el controlador ```getAll``` recupera todos los libros correctamente sin ningún filtro de búsquedaVerificar que el controlador getAll recupera todos los libros correctamente sin ningún filtro de búsqueda.
+   - **Objetivo:** Verificar que el controlador ```getAll``` recupera todos los libros correctamente sin ningún filtro de búsqueda.
    - **Pasos Clave:**
      1. Se configura el repositorio para devolver una lista de objetos ```Tutorial```.
      2. Se verifica que el repositorio ```findAll()``` es llamado.
@@ -230,7 +230,7 @@ Describe cómo Jenkins automatiza este análisis.
       
 #### Evidencia de Pruebas Unitarias
    <div align="center">
-      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/mvn test unit" alt="mvn test unit" width="600">
+      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/mvn test unit.png" alt="mvn test unit" width="600">
    </div>
 
 #### Integración con Jenkins
