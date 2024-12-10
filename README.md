@@ -139,7 +139,7 @@ El sistema utiliza **H2 Database** como base de datos integrada para almacenar l
    </div>
 
 ### B. Análisis Estático
-- El análisis estático fue realizado para garantizar la calidad, seguridad y mantenibilidad del código del proyecto. Esto se implementó utilizando herramientas especializadas que nos ayudaron a identificar defectos en las etapas iniciales del desarrollo.
+El análisis estático fue realizado para garantizar la calidad, seguridad y mantenibilidad del código del proyecto. Esto se implementó utilizando herramientas especializadas que nos ayudaron a identificar defectos en las etapas iniciales del desarrollo.
 - Herramientas Utilizadas:
   - SonarQube: Para generar informes detallados sobre métricas de calidad y posibles errores en el código.
   - Jenkins: Integrado con SonarQube para automatizar el análisis estático dentro del pipeline de CI/CD.
@@ -408,9 +408,9 @@ En GitHub Projects, se registran los problemas más relevantes identificados dur
 - **Etiqueta:** Clasificación de la tarea según su prioridad o tipo (por ejemplo, bug, mejora).  
 - **Duración estimada:** Tiempo aproximado para completar la tarea.
 
-
-
 ---
 
 ## 3. Conclusiones
-Resume los logros principales del proyecto, las tecnologías usadas y los resultados obtenidos.
+
+El proyecto **BiblioHub** logró desarrollar una aplicación robusta y eficiente para la gestión de libros, implementando tecnologías como Spring Boot y Thymeleaf. Se automatizó el ciclo de vida del desarrollo mediante Jenkins y se garantizaron estándares de calidad con pruebas unitarias y análisis de código estático con SonarQube. A pesar de algunos desafíos, como la coordinación entre miembros del equipo y la detección de problemas de duplicación de código, el sistema cumple con los objetivos planteados. Las pruebas de rendimiento y seguridad confirmaron la estabilidad y viabilidad de la aplicación. Se identificaron áreas de mejora, como la escalabilidad y la optimización de pruebas automatizadas, lo que proporciona una base sólida para futuras actualizaciones y expansiones del proyecto.
+
