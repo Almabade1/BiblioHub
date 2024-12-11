@@ -419,11 +419,11 @@ El bloque `stage("Pruebas de Rendimiento - JMeter")` en el pipeline de Jenkins e
   
     <div align="center">
       <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/reporte zap.png" alt="reporte zap" width="600">
-   </div>
+    </div>
    
 #### Integración con Jenkins
 
-    <div align="center">
+   <div align="center">
       <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/jenkins zap.png" alt="jenkins zap" width="600">
    </div> 
 
