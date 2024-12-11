@@ -157,7 +157,7 @@ El análisis estático fue realizado para garantizar la calidad, seguridad y man
    </div>
   
 - **Bugs:**
-  Se identificaron varios bugs, entre ellos:
+  Se identificaron algunos bugs, entre ellos:
 
   <div align="center">
       <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/bugs.png" alt="bugs" width="600">
@@ -167,7 +167,15 @@ El análisis estático fue realizado para garantizar la calidad, seguridad y man
   Se detectaron varios code smells relacionados con duplicación de código. Esto puede dificultar el mantenimiento del sistema.
 
   <div align="center">
-      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/code smells.png" alt="code smells" width="600">
+      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/code smells 1.png" alt="code smells" width="600">
+   </div>
+
+   <div align="center">
+      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/code smells 2.png" alt="code smells" width="600">
+   </div>
+
+   <div align="center">
+      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/code smells 3.png" alt="code smells" width="600">
    </div>
   
 #### Integración con Jenkins
@@ -351,9 +359,9 @@ El análisis estático fue realizado para garantizar la calidad, seguridad y man
 ### E. Pruebas de Performance
 - En este apartado se llevaron a cabo pruebas de rendimiento utilizando Apache JMeter para evaluar el desempeño del sistema. Estas pruebas permitieron identificar cuellos de botella y analizar la capacidad de respuesta de la aplicación bajo distintas condiciones de carga. Los parámetros configurados incluyeron lo siguiente:
   
-  - **Número de threads:** a
-  - **Ramp-up period:** n segundos
-  - **Loop count:** x
+  - **Número de threads:** 50
+  - **Ramp-up period:** 10 segundos
+  - **Loop count:** 10
 
 #### Casos evaluados
 1. **Caso 1:**
