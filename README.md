@@ -399,7 +399,11 @@ El análisis estático fue realizado para garantizar la calidad, seguridad y man
 #### Resultados de la ejecución de las pruebas de performance
 
    <div align="center">
-      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/jmeter report.png" alt="jmeter report" width="600">
+      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/jmeter report 1.png" alt="jmeter report" width="600">
+   </div>
+
+   <div align="center">
+      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/jmeter report 2.png" alt="jmeter report" width="600">
    </div>
 
 #### Integración de las pruebas de performance con Jenkins
@@ -414,12 +418,8 @@ El bloque `stage("Pruebas de Rendimiento - JMeter")` en el pipeline de Jenkins e
 - Breve descripción de las pruebas de seguridad realizadas.
   
     <div align="center">
-      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/jenkins jmeter 1.png" alt="reporte zap" width="600">
-   </div> 
-   
-    <div align="center">
-      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/jenkins jmeter 2.png" alt="reporte zap" width="600">
-   </div> 
+      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/reporte zap.png" alt="reporte zap" width="600">
+   </div>
    
 #### Integración con Jenkins
 
