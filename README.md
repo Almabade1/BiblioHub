@@ -153,7 +153,7 @@ El análisis estático fue realizado para garantizar la calidad, seguridad y man
   Este análisis ayuda a evaluar la mantenibilidad del código y reducir la deuda técnica.
 
   <div align="center">
-      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/complejidad.png" alt="complejidad" width="600">
+      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/complejidad.png" alt="complejidad">
    </div>
   
 - **Bugs:**
@@ -347,7 +347,7 @@ El análisis estático fue realizado para garantizar la calidad, seguridad y man
 #### Evidencia de Pruebas Funcionales
 
    <div align="center">
-      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/mvn test.png" alt="mvn test">
+      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/mvn test.png" alt="mvn test" width="600">
    </div>
 
 #### Integración con Jenkins
