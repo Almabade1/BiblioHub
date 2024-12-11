@@ -101,19 +101,26 @@ Crear una plataforma intuitiva y robusta para la administración eficiente de li
 ### Ramas
 Cada miembro del equipo creó su propia rama para trabajar de manera independiente. Este enfoque permite mantener un control claro sobre las contribuciones individuales y asegura que las modificaciones de cada participante se integren de manera ordenada. A continuación, se describe la estructura de ramas utilizada:
 
-1. **master:**
+1. **main:**
+   
    - Esta es la rama principal y estable del proyecto.
    - Contiene el código listo para producción y despliegue.
    - Solo se fusionan cambios que han sido revisados y probados.
 
-2. **Ramas individuales:**
-   Cada participante del equipo creó una rama personal identificada por su nombre. Estas ramas se utilizaron para **desarrollar** y **probar** las contribuciones individuales antes de integrarlas a la rama principal.
-   - Maycol
-   - cesar
-   - leonardo
-   - luis
-   - mariana
-   - sergio
+3. **desarrollo**
+   
+   Cada participante del equipo creó una rama personal para el **desarrollo**.
+   - `Maycol`
+   - `cesar`
+   - `leonardo`
+   - `luis`
+   - `mariana`
+   - `sergio`
+     
+ 4. **Pruebas funcionales**
+    
+    Se creó una rama para realizar las pruebas funcionales y unitarias:
+    - `pruebas-funcionales`
 
 ### Guardado de Datos  
 El sistema utiliza **H2 Database** como base de datos integrada para almacenar los datos. Durante la ejecución:  
@@ -415,7 +422,9 @@ El bloque `stage("Pruebas de Rendimiento - JMeter")` en el pipeline de Jenkins e
    </div>
 
 ### F. Pruebas de Seguridad
-- Breve descripción de las pruebas de seguridad realizadas.
+- Se llevan a cabo pruebas de seguridad para asegurar que la aplicación esté protegida contra vulnerabilidades comunes, como inyecciones SQL, XSS y CSRF.
+
+- Se realizan validaciones utilizando ZAP en un entorno controlado. Este entorno ejecuta las pruebas web necesarias para evaluar la seguridad y el rendimiento, empleando la imagen oficial de ZAP disponible en Docker Hub. Estas pruebas generan un informe que permite determinar si la aplicación es segura. Además, se ofrece la posibilidad de configurar los parámetros de las evaluaciones a realizar.
   
     <div align="center">
       <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/reporte zap.png" alt="reporte zap" width="600">
