@@ -101,15 +101,16 @@ Crear una plataforma intuitiva y robusta para la administración eficiente de li
 ### Ramas
 Cada miembro del equipo creó su propia rama para trabajar de manera independiente. Este enfoque permite mantener un control claro sobre las contribuciones individuales y asegura que las modificaciones de cada participante se integren de manera ordenada. A continuación, se describe la estructura de ramas utilizada:
 
-1. **main:**
+1. **Main:**
    
    - Esta es la rama principal y estable del proyecto.
    - Contiene el código listo para producción y despliegue.
    - Solo se fusionan cambios que han sido revisados y probados.
 
-3. **desarrollo**
+3. **Desarrollo**
    
-   Cada participante del equipo creó una rama personal para el **desarrollo**.
+   Cada participante del equipo creó una rama personal para el **desarrollo** del proyecto.
+   
    - `Maycol`
    - `cesar`
    - `leonardo`
@@ -117,7 +118,7 @@ Cada miembro del equipo creó su propia rama para trabajar de manera independien
    - `mariana`
    - `sergio`
      
- 4. **Pruebas funcionales**
+ 5. **Pruebas funcionales**
     
     Se creó una rama para realizar las pruebas funcionales y unitarias:
     - `pruebas-funcionales`
