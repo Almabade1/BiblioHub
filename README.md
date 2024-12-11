@@ -347,7 +347,7 @@ El análisis estático fue realizado para garantizar la calidad, seguridad y man
 #### Evidencia de Pruebas Funcionales
 
    <div align="center">
-      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/mvn test.png" alt="mvn test" width="600">
+      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/mvn test.png" alt="mvn test">
    </div>
 
 #### Integración con Jenkins
@@ -364,28 +364,36 @@ El análisis estático fue realizado para garantizar la calidad, seguridad y man
   - **Loop count:** 10
 
 #### Casos evaluados
-1. **Caso 1:**
+1. **Guardar libro:**
    
-   Utiliza un HTTP Request con un método POST para - el mensaje -.
+   Utiliza un HTTP Request con un método POST para guardar un libro.
    
    <div align="center">
       <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/caso 1.png" alt="caso 1" width="600">
    </div>
    
-2. **Caso 2:**
+2. **Listar libros:**
    
-   Utiliza un HTTP Request con un método POST para - el mensaje -.
+   Utiliza un HTTP Request con un método GET para listar los libros.
    
    <div align="center">
       <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/caso 2.png" alt="caso 2" width="600">
    </div>
 
-3. **Caso 3:**
+3. **Eliminar libro:**
    
-   Utiliza un HTTP Request con un método POST para - el mensaje -.
+   Utiliza un HTTP Request con un método GET para eliminar un libro.
    
    <div align="center">
       <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/caso 3.png" alt="caso 3" width="600">
+   </div>
+
+4. **Editar libro:**
+   
+   Utiliza un HTTP Request con un método GET para editar un libro.
+   
+   <div align="center">
+      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/caso 4.png" alt="caso 4" width="600">
    </div>
 
 #### Resultados de la ejecución de las pruebas de performance
@@ -404,9 +412,20 @@ El bloque `stage("Pruebas de Rendimiento - JMeter")` en el pipeline de Jenkins e
 
 ### F. Pruebas de Seguridad
 - Breve descripción de las pruebas de seguridad realizadas.
-
+  
+    <div align="center">
+      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/jenkins jmeter 1.png" alt="reporte zap" width="600">
+   </div> 
+   
+    <div align="center">
+      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/jenkins jmeter 2.png" alt="reporte zap" width="600">
+   </div> 
+   
 #### Integración con Jenkins
-Explica cómo Jenkins automatiza estas pruebas.
+
+    <div align="center">
+      <img src="https://github.com/Almabade1/BiblioHub/blob/main/Imagenes/jenkins zap.png" alt="jenkins zap" width="600">
+   </div> 
 
 ### G. Gestión de Issues
 En GitHub Projects, se registran los problemas más relevantes identificados durante las pruebas en SonarQube. También se distribuye el trabajo entre los miembros del equipo mediante tareas, las cuales incluyen:
