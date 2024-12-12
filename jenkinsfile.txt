@@ -1,0 +1,93 @@
+pipeline {
+    agent any
+    tools {
+        jdk 'JAVA'         // Configura Java en Jenkins
+        maven 'maven'      // Configura Maven en Jenkins
+    }
+    environment {
+        SCANNER_HOME = tool 'sonar-scanner'
+        CHROMEDRIVER_PATH = "C:/Seleniumdrivers/chromedriver.exe" // Actualiza según la ubicación del ChromeDriver
+        JMETER_PATH = "C:/apache-jmeter-5.6.3/apache-jmeter-5.6.3/bin"
+        ZAP_PATH="C:/Program Files/ZAP/Zed Attack Proxy/zap-2.15.0.jar"
+        TARGET_URL ='http://localhost:8081/'
+        ZAP = "C:/Users/balce/OneDrive/Escritorio/Pruebas/zap.html"
+    }
+    
+    stages {
+        
+        stage("Clonar Repositorio") {
+            steps {
+                git branch: 'luis',changelog:false, poll:false,url: 'https://github.com/Almabade1/BiblioHub.git'
+                
+            }
+        }
+
+        stage("Compilar Proyecto") {
+            steps {
+                bat "mvn -f Proyect-Biblio/pom.xml clean compile" // Compila el módulo principal
+            }
+        }
+        
+        stage("Ejecutar Análisis con SonarQube") {
+            steps {
+                bat """
+                $SCANNER_HOME/bin/sonar-scanner \
+                -Dsonar.projectKey=BiblioHub \
+                -Dsonar.projectName=BiblioHub \
+                -Dsonar.sources=Proyect-Biblio/src/main/java \
+                -Dsonar.java.binaries=Proyect-Biblio/target/classes \
+                -Dsonar.host.url=http://localhost:9000 \
+                -Dsonar.login=squ_4f350840f8c9d256f2fecb7f4ace1031d409bf0a
+                """
+            }
+        }
+
+        stage("Ejecutar Pruebas Unitarias") {
+            steps {
+                bat "mvn -f Proyect-Biblio/pom.xml test" // Ejecuta las pruebas unitarias con JUnit
+            }
+            post {
+                always {
+                    junit 'Proyect-Biblio/target/surefire-reports/*.xml' // Publica reportes de pruebas unitarias
+                }
+            }
+        }
+
+        stage("Ejecutar Pruebas Funcionales") {
+            steps {
+                bat "mvn -f SeleniumTest/pom.xml test" // Ejecuta pruebas funcionales con Selenium
+            }
+            post {
+                always {
+                    junit 'SeleniumTest/target/surefire-reports/*.xml' // Publica reportes de pruebas funcionales
+                }
+            }
+        }
+        
+        
+        stage("Pruebas de Rendimiento - JMeter") {
+            steps {
+                script {
+                    echo "Ejecutando pruebas de rendimiento con JMeter..."
+                    bat """
+                    ${JMETER_PATH}/jmeter.bat -n -t "C:/apache-jmeter-5.6.3/bibliohubTest.jmx" -l resultados.jtl -e -o "C:/Program Files/Jenkins/reporte_rendimiento"
+                    """
+                }
+            }
+        } 
+        
+        stage("Pruebas de Seguridad -  Zap"){
+            steps{
+                script{
+                    bat "java -Xmx512m -jar \"${ZAP_PATH}\" -cmd -quickurl ${TARGET_URL} -quickout ${ZAP}"
+                }
+            }
+        }
+        
+    }
+    post {
+        always {
+            cleanWs() // Limpia el workspace después de cada ejecución
+        }
+    }
+ }
